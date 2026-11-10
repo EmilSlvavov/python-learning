@@ -1,0 +1,15 @@
+inputString = input("Leave an input: ")
+stripped = inputString.strip()
+if not stripped:
+    print("Invalid input")
+else:
+    print(stripped)
+    print("=" * len(stripped))
+    print(len(stripped))
+    words = stripped.split()
+    print(len(words))
+    print(stripped.upper())
+    print(stripped[::-1])
+    print(words[0], words[-1])
+    print("python" in stripped.lower())
+    print(stripped.replace(" ", "_"))
