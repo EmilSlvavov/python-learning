@@ -1,17 +1,23 @@
+def ask(prompt: str) -> str:
+    """Asks for input and returns it stripped and lowercased"""
+    user_message = input(prompt).strip().lower()
+    return user_message
+
+
 def add_contact(book: dict[str, str]) -> None:
-    name = input("Enter name: ").strip().lower()
+    name = ask("Enter name: ")
     if not name:
         return
-    if name in phonebook:
-        answer = input("Do you wish to Overwrite phone number? (y/n)").strip().lower()
+    if name in book:
+        answer = ask("Do you wish to Overwrite phone number? (y/n)")
         if answer != "y":
             return
-    phone_number = input("Enter phone number: ").strip()
+    phone_number = ask("Enter phone number: ")
     book[name] = phone_number
 
 
 def look_up(book: dict[str, str]) -> None:
-    search = input("Enter a name: ").strip().lower()
+    search = ask("Enter name: ")
     if search in book:
         print(book.get(search))
     else:
@@ -19,7 +25,7 @@ def look_up(book: dict[str, str]) -> None:
 
 
 def delete_contact(book: dict[str, str]) -> None:
-    name = input("Enter name: ").strip().lower()
+    name = ask("Enter name: ")
     if name in book:
         del book[name]
         print("Deleted.")
@@ -30,6 +36,7 @@ def delete_contact(book: dict[str, str]) -> None:
 def show_all(book: dict[str, str]) -> None:
     for name, phone in sorted(book.items()):
         print(f"{name.title()}: {phone}")
+
 
 phonebook = {}
 while True:

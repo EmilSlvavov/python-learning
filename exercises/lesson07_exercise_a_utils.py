@@ -1,13 +1,15 @@
 def ask(prompt: str) -> str:
     """Asks for input and returns it stripped and lowercased"""
-    return prompt.strip().lower()
+    user_message = input(prompt).strip().lower()
+    return user_message
 
 
 def ask_int(text: str) -> int:
     """Keeps asking until the user types something that is digits only and returns it as an int"""
-    while not text.isdigit():
-        text = input("Try again!")
-    return int(text)
+    number = input(text)
+    while not number.isdigit():
+        number = input("Try again! ")
+    return int(number)
 
 
 def word_count(text: str) -> dict[str, int]:
@@ -20,5 +22,10 @@ def word_count(text: str) -> dict[str, int]:
 
 def top_words(counts: dict[str, int], n: int = 5) -> list[tuple[str, int]]:
     """Returns the n most common words with n = 5 by default"""
-    top = sorted(counts.items(), key=lambda item: item[1], reverse=True)[:5]
-    return list(top)
+    top = sorted(counts.items(), key=lambda item: item[1], reverse=True)[:n]
+    return top
+
+print(word_count("the cat and the dog"))
+print(top_words(word_count("a b a c a b"), 2))
+ask_int("Enter: ")
+print(ask("Enter text: "))
