@@ -1,0 +1,7 @@
+Python is a programming language created by Guido van Rossum.
+The first version was released in 1991.
+
+Python is named after a comedy group, not the snake.
+
+Today Python is one of the most popular languages for AI.
+It is simple to read and easy to learn.
