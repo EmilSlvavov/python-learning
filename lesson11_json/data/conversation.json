@@ -1,0 +1,14 @@
+[
+  {
+    "role": "system",
+    "content": "You are a helpful assistant."
+  },
+  {
+    "role": "user",
+    "content": "What is JSON?"
+  },
+  {
+    "role": "assistant",
+    "content": "A text format for structured data."
+  }
+]

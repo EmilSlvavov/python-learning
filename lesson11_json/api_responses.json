@@ -1,0 +1,41 @@
+[
+  {
+    "id": "resp_001",
+    "model": "gpt-5-mini",
+    "status": "completed",
+    "output": [
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {"type": "output_text", "text": "Python is a programming language."}
+        ]
+      }
+    ],
+    "usage": {"input_tokens": 12, "output_tokens": 7, "total_tokens": 19},
+    "error": null
+  },
+  {
+    "id": "resp_002",
+    "model": "gpt-5-mini",
+    "status": "completed",
+    "output": [
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {"type": "output_text", "text": "RAG means Retrieval-Augmented Generation."}
+        ]
+      }
+    ],
+    "usage": {"input_tokens": 15, "output_tokens": 9, "total_tokens": 24},
+    "error": null
+  },
+  {
+    "id": "resp_003",
+    "model": "gpt-5-mini",
+    "status": "failed",
+    "output": [],
+    "error": {"code": "rate_limit_exceeded", "message": "Too many requests."}
+  }
+]
