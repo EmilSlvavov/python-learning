@@ -1,0 +1,17 @@
+{
+  "system_prompt": "You are a helpful assistant.",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is JSON?"
+    },
+    {
+      "role": "assistant",
+      "content": "A text format for strucutred data."
+    },
+    {
+      "role": "user",
+      "content": "Thanks!"
+    }
+  ]
+}
